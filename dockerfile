@@ -30,4 +30,10 @@ EXPOSE 8888
 # CMD ["jupyter", "notebook", "--ip='*'", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''", "--      NotebookApp.password=''", "--NotebookApp.disable_check_xsrf=True"]
 
 # Command to start Jupyter Lab with the copied notebook
-CMD ["jupyter", "lab", "--ip='*'", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''", "--NotebookApp.password=''", "--NotebookApp.disable_check_xsrf=True", "--notebook-dir=/notebooks"]
+# CMD ["jupyter", "lab", "--ip='*'", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''", "--NotebookApp.password=''", "--NotebookApp.disable_check_xsrf=True", "--notebook-dir=/notebooks"]
+
+
+# CMD ["jupyter", "lab", "--ip='*'", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''", "--NotebookApp.password=''", "--NotebookApp.disable_check_xsrf=True", "--notebook-dir=/notebooks", "turn_down.ipynb"]
+
+
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=", "--turn_down.ipynb"]
